@@ -1,6 +1,6 @@
 <html>
    <body>
-      <span style="padding-left:20px">
+      <span style="padding-left:25px"></span>
       <button type="button" onclick="put1()">
          <img id="box1" src="assets/empty-token.jpg" width="70" height="70">
       </button>
@@ -17,7 +17,7 @@
          <img id="box5" src="assets/empty-token.jpg" width="70" height="70">
       </button>
       <br>
-      <span style="padding-left:20px">
+      <span style="padding-left:25px"></span>
       <button type="button" onclick="put6()">
          <img id="box6" src="assets/empty-token.jpg" width="70" height="70">
       </button>
@@ -51,7 +51,7 @@
          <img id="box15" src="assets/empty-token.jpg" width="70" height="70">
       </button>
       <br>
-      <span style="padding-left:20px">
+      <span style="padding-left:25px"></span>
       <button type="button" onclick="put16()">
          <img id="box16" src="assets/empty-token.jpg" width="70" height="70">
       </button>
@@ -68,7 +68,7 @@
          <img id="box20" src="assets/empty-token.jpg" width="70" height="70">
       </button>
       <br>
-      <span style="padding-left:20px">
+      <span style="padding-left:25px"></span>
       <button type="button" onclick="put21()">
          <img id="box21" src="assets/empty-token.jpg" width="70" height="70">
       </button>
@@ -85,7 +85,7 @@
          <img id="box25" src="assets/empty-token.jpg" width="70" height="70">
       </button>
       <br>
-      <span style="padding-left:20px">
+      <span style="padding-left:25px"></span>
       <button type="button" onclick="put26()">
          <img id="box26" src="assets/empty-token.jpg" width="70" height="70">
       </button>
