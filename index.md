@@ -34,7 +34,7 @@
          <img id="box10" src="assets/empty-token.jpg" width="70" height="70">
       </button>
       <br>
-      <span style="padding-left:20px">
+      <span style="padding-left:25px"></span>
       <button type="button" onclick="put11()">
          <img id="box11" src="assets/empty-token.jpg" width="70" height="70">
       </button>
