@@ -1,99 +1,99 @@
 <html>
    <body>
       <button type="button" onclick="put1()">
-         <img id="box1" src="assets/empty-token.jpg" width=70" height="70">
+         <img id="box1" src="assets/empty-token.jpg" width="70" height="70">
       </button>
       <button type="button" onclick="put2()">
-         <img id="box2" src="assets/empty-token.jpg" width=70" height="70">
+         <img id="box2" src="assets/empty-token.jpg" width="70" height="70">
       </button>
       <button type="button" onclick="put3()">
-         <img id="box3" src="assets/empty-token.jpg" width=70" height="70">
+         <img id="box3" src="assets/empty-token.jpg" width="70" height="70">
       </button>
       <button type="button" onclick="put4()">
-         <img id="box4" src="assets/empty-token.jpg" width=70" height="70">
+         <img id="box4" src="assets/empty-token.jpg" width="70" height="70">
       </button>
       <button type="button" onclick="put5()">
-         <img id="box5" src="assets/empty-token.jpg" width=70" height="70">
+         <img id="box5" src="assets/empty-token.jpg" width="70" height="70">
       </button>
       <br>
       <button type="button" onclick="put6()">
-         <img id="box6" src="assets/empty-token.jpg" width=70" height="70">
+         <img id="box6" src="assets/empty-token.jpg" width="70" height="70">
       </button>
       <button type="button" onclick="put7()">
-         <img id="box7" src="assets/empty-token.jpg" width=70" height="70">
+         <img id="box7" src="assets/empty-token.jpg" width="70" height="70">
       </button>
       <button type="button" onclick="put8()">
-         <img id="box8" src="assets/empty-token.jpg" width=70" height="70">
+         <img id="box8" src="assets/empty-token.jpg" width="70" height="70">
       </button>
       <button type="button" onclick="put9()">
-         <img id="box9" src="assets/empty-token.jpg" width=70" height="70">
+         <img id="box9" src="assets/empty-token.jpg" width="70" height="70">
       </button>
       <button type="button" onclick="put10()">
-         <img id="box10" src="assets/empty-token.jpg" width=70" height="70">
+         <img id="box10" src="assets/empty-token.jpg" width="70" height="70">
       </button>
       <br>
       <button type="button" onclick="put11()">
-         <img id="box11" src="assets/empty-token.jpg" width=70" height="70">
+         <img id="box11" src="assets/empty-token.jpg" width="70" height="70">
       </button>
       <button type="button" onclick="put12()">
-         <img id="box12" src="assets/empty-token.jpg" width=70" height="70">
+         <img id="box12" src="assets/empty-token.jpg" width="70" height="70">
       </button>
       <button type="button" onclick="put13()">
-         <img id="box13" src="assets/empty-token.jpg" width=70" height="70">
+         <img id="box13" src="assets/empty-token.jpg" width="70" height="70">
       </button>
       <button type="button" onclick="put14()">
-         <img id="box14" src="assets/empty-token.jpg" width=70" height="70">
+         <img id="box14" src="assets/empty-token.jpg" width="70" height="70">
       </button>
       <button type="button" onclick="put15()">
-         <img id="box15" src="assets/empty-token.jpg" width=70" height="70">
+         <img id="box15" src="assets/empty-token.jpg" width="70" height="70">
       </button>
       <br>
       <button type="button" onclick="put16()">
-         <img id="box16" src="assets/empty-token.jpg" width=70" height="70">
+         <img id="box16" src="assets/empty-token.jpg" width="70" height="70">
       </button>
       <button type="button" onclick="put17()">
-         <img id="box17" src="assets/empty-token.jpg" width=70" height="70">
+         <img id="box17" src="assets/empty-token.jpg" width="70" height="70">
       </button>
       <button type="button" onclick="put18()">
-         <img id="box18" src="assets/empty-token.jpg" width=70" height="70">
+         <img id="box18" src="assets/empty-token.jpg" width="70" height="70">
       </button>
       <button type="button" onclick="put19()">
-         <img id="box19" src="assets/empty-token.jpg" width=70" height="70">
+         <img id="box19" src="assets/empty-token.jpg" width="70" height="70">
       </button>
       <button type="button" onclick="put20()">
-         <img id="box20" src="assets/empty-token.jpg" width=70" height="70">
+         <img id="box20" src="assets/empty-token.jpg" width="70" height="70">
       </button>
       <br>
       <button type="button" onclick="put21()">
-         <img id="box21" src="assets/empty-token.jpg" width=70" height="70">
+         <img id="box21" src="assets/empty-token.jpg" width="70" height="70">
       </button>
       <button type="button" onclick="put22()">
-         <img id="box22" src="assets/empty-token.jpg" width=70" height="70">
+         <img id="box22" src="assets/empty-token.jpg" width="70" height="70">
       </button>
       <button type="button" onclick="put23()">
-         <img id="box23" src="assets/empty-token.jpg" width=70" height="70">
+         <img id="box23" src="assets/empty-token.jpg" width="70" height="70">
       </button>
       <button type="button" onclick="put24()">
-         <img id="box24" src="assets/empty-token.jpg" width=70" height="70">
+         <img id="box24" src="assets/empty-token.jpg" width="70" height="70">
       </button>
       <button type="button" onclick="put25()">
-         <img id="box25" src="assets/empty-token.jpg" width=70" height="70">
+         <img id="box25" src="assets/empty-token.jpg" width="70" height="70">
       </button>
       <br>
       <button type="button" onclick="put26()">
-         <img id="box26" src="assets/empty-token.jpg" width=70" height="70">
+         <img id="box26" src="assets/empty-token.jpg" width="70" height="70">
       </button>
       <button type="button" onclick="put27()">
-         <img id="box27" src="assets/empty-token.jpg" width=70" height="70">
+         <img id="box27" src="assets/empty-token.jpg" width="70" height="70">
       </button>
       <button type="button" onclick="put28()">
-         <img id="box28" src="assets/empty-token.jpg" width=70" height="70">
+         <img id="box28" src="assets/empty-token.jpg" width="70" height="70">
       </button>
       <button type="button" onclick="put29()">
-         <img id="box29" src="assets/empty-token.jpg" width=70" height="70">
+         <img id="box29" src="assets/empty-token.jpg" width="70" height="70">
       </button>
       <button type="button" onclick="put30()">
-         <img id="box30" src="assets/empty-token.jpg" width=70" height="70">
+         <img id="box30" src="assets/empty-token.jpg" width="70" height="70">
       </button>
 
       <script>
