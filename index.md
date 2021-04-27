@@ -104,10 +104,6 @@
 
       <script>
         var card = "white-rock";
-        var grid = [];
-        for(var i=0; i<6; i++) {
-          grid[i] = new Array(5);
-        }
         function put(num) {
           document.getElementById("box"+num).src="assets/"+card+".jpg";
         }
