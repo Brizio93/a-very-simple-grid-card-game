@@ -103,6 +103,7 @@
       </button>
 
       <script>
+        var waitFlag = false;
         var cards = ["white-rock", "white-paper", "white-scissors"];
         var currentCard = cards[Math.floor(Math.random() * cards.length)];
         var enemyCards = ["black-rock", "black-paper", "black-scissors"];
@@ -121,18 +122,20 @@
           ["sentinel", "sentinel", "sentinel", "sentinel", "sentinel", "sentinel", "sentinel"]
         ];
         async function put(row, column) {
-          if(grid[row][column]=="empty-token") {
-            grid[row][column]=currentCard;
+          if(grid[row][column]=="empty-token" && waitFlag==false) {
+            grid[row][column] = currentCard;
             updateFreeBoxes(row, column);
-            document.getElementById("r"+row+"c"+column).src="assets/"+currentCard+".jpg";
+            document.getElementById("r"+row+"c"+column).src = "assets/"+currentCard+".jpg";
+            waitFlag = true;
             await new Promise(r => setTimeout(r, 2000));
             const enemyTarget = freeBoxes.pop();
             const enemyRow = enemyTarget[0];
             const enemyColumn = enemyTarget[1]
-            grid[enemyRow][enemyColumn]=enemyCurrentCard;
-            document.getElementById("r"+enemyRow+"c"+enemyColumn).src="assets/"+enemyCurrentCard+".jpg";
+            grid[enemyRow][enemyColumn] = enemyCurrentCard;
+            document.getElementById("r"+enemyRow+"c"+enemyColumn).src = "assets/"+enemyCurrentCard+".jpg";
             currentCard = cards[Math.floor(Math.random() * cards.length)];
             enemyCurrentCard = enemyCards[Math.floor(Math.random() * enemyCards.length)];
+            waitFlag = false;
           }
         }
         function updateFreeBoxes(row, column){
