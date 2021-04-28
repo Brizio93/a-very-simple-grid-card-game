@@ -1,111 +1,157 @@
 <html>
    <body>
       <span style="padding-left:25px"></span>
-      <button type="button" onclick="put(1)">
-         <img id="box1" src="assets/empty-token.jpg" width="70" height="70">
+      <button type="button" onclick="put(1,1)">
+         <img id="r1c1" src="assets/empty-token.jpg" width="70" height="70">
       </button>
-      <button type="button" onclick="put(2)">
-         <img id="box2" src="assets/empty-token.jpg" width="70" height="70">
+      <button type="button" onclick="put(1,2)">
+         <img id="r1c2" src="assets/empty-token.jpg" width="70" height="70">
       </button>
-      <button type="button" onclick="put(3)">
-         <img id="box3" src="assets/empty-token.jpg" width="70" height="70">
+      <button type="button" onclick="put(1,3)">
+         <img id="r1c3" src="assets/empty-token.jpg" width="70" height="70">
       </button>
-      <button type="button" onclick="put(4)">
-         <img id="box4" src="assets/empty-token.jpg" width="70" height="70">
+      <button type="button" onclick="put(1,4)">
+         <img id="r1c4" src="assets/empty-token.jpg" width="70" height="70">
       </button>
-      <button type="button" onclick="put(5)">
-         <img id="box5" src="assets/empty-token.jpg" width="70" height="70">
-      </button>
-      <br>
-      <span style="padding-left:25px"></span>
-      <button type="button" onclick="put(6)">
-         <img id="box6" src="assets/empty-token.jpg" width="70" height="70">
-      </button>
-      <button type="button" onclick="put(7)">
-         <img id="box7" src="assets/empty-token.jpg" width="70" height="70">
-      </button>
-      <button type="button" onclick="put(8)">
-         <img id="box8" src="assets/empty-token.jpg" width="70" height="70">
-      </button>
-      <button type="button" onclick="put(9)">
-         <img id="box9" src="assets/empty-token.jpg" width="70" height="70">
-      </button>
-      <button type="button" onclick="put(10)">
-         <img id="box10" src="assets/empty-token.jpg" width="70" height="70">
+      <button type="button" onclick="put(1,5)">
+         <img id="r1c5" src="assets/empty-token.jpg" width="70" height="70">
       </button>
       <br>
       <span style="padding-left:25px"></span>
-      <button type="button" onclick="put(11)">
-         <img id="box11" src="assets/empty-token.jpg" width="70" height="70">
+      <button type="button" onclick="put(2,1)">
+         <img id="r2c1" src="assets/empty-token.jpg" width="70" height="70">
       </button>
-      <button type="button" onclick="put(12)">
-         <img id="box12" src="assets/empty-token.jpg" width="70" height="70">
+      <button type="button" onclick="put(2,2)">
+         <img id="r2c2" src="assets/empty-token.jpg" width="70" height="70">
       </button>
-      <button type="button" onclick="put(13)">
-         <img id="box13" src="assets/empty-token.jpg" width="70" height="70">
+      <button type="button" onclick="put(2,3)">
+         <img id="r2c3" src="assets/empty-token.jpg" width="70" height="70">
       </button>
-      <button type="button" onclick="put(14)">
-         <img id="box14" src="assets/empty-token.jpg" width="70" height="70">
+      <button type="button" onclick="put(2,4)">
+         <img id="r2c4" src="assets/empty-token.jpg" width="70" height="70">
       </button>
-      <button type="button" onclick="put(15)">
-         <img id="box15" src="assets/empty-token.jpg" width="70" height="70">
-      </button>
-      <br>
-      <span style="padding-left:25px"></span>
-      <button type="button" onclick="put(16)">
-         <img id="box16" src="assets/empty-token.jpg" width="70" height="70">
-      </button>
-      <button type="button" onclick="put(17)">
-         <img id="box17" src="assets/empty-token.jpg" width="70" height="70">
-      </button>
-      <button type="button" onclick="put(18)">
-         <img id="box18" src="assets/empty-token.jpg" width="70" height="70">
-      </button>
-      <button type="button" onclick="put(19)">
-         <img id="box19" src="assets/empty-token.jpg" width="70" height="70">
-      </button>
-      <button type="button" onclick="put(20)">
-         <img id="box20" src="assets/empty-token.jpg" width="70" height="70">
+      <button type="button" onclick="put(2,5)">
+         <img id="r2c5" src="assets/empty-token.jpg" width="70" height="70">
       </button>
       <br>
       <span style="padding-left:25px"></span>
-      <button type="button" onclick="put(21)">
-         <img id="box21" src="assets/empty-token.jpg" width="70" height="70">
+      <button type="button" onclick="put(3,1)">
+         <img id="r3c1" src="assets/empty-token.jpg" width="70" height="70">
       </button>
-      <button type="button" onclick="put(22)">
-         <img id="box22" src="assets/empty-token.jpg" width="70" height="70">
+      <button type="button" onclick="put(3,2)">
+         <img id="r3c2" src="assets/empty-token.jpg" width="70" height="70">
       </button>
-      <button type="button" onclick="put(23)">
-         <img id="box23" src="assets/empty-token.jpg" width="70" height="70">
+      <button type="button" onclick="put(3,3)">
+         <img id="r3c3" src="assets/empty-token.jpg" width="70" height="70">
       </button>
-      <button type="button" onclick="put(24)">
-         <img id="box24" src="assets/empty-token.jpg" width="70" height="70">
+      <button type="button" onclick="put(3,4)">
+         <img id="r3c4" src="assets/empty-token.jpg" width="70" height="70">
       </button>
-      <button type="button" onclick="put(25)">
-         <img id="box25" src="assets/empty-token.jpg" width="70" height="70">
+      <button type="button" onclick="put(3,5)">
+         <img id="r3c5" src="assets/empty-token.jpg" width="70" height="70">
       </button>
       <br>
       <span style="padding-left:25px"></span>
-      <button type="button" onclick="put(26)">
-         <img id="box26" src="assets/empty-token.jpg" width="70" height="70">
+      <button type="button" onclick="put(4,1)">
+         <img id="r4c1" src="assets/empty-token.jpg" width="70" height="70">
       </button>
-      <button type="button" onclick="put(27)">
-         <img id="box27" src="assets/empty-token.jpg" width="70" height="70">
+      <button type="button" onclick="put(4,2)">
+         <img id="r4c2" src="assets/empty-token.jpg" width="70" height="70">
       </button>
-      <button type="button" onclick="put(28)">
-         <img id="box28" src="assets/empty-token.jpg" width="70" height="70">
+      <button type="button" onclick="put(4,3)">
+         <img id="r4c3" src="assets/empty-token.jpg" width="70" height="70">
       </button>
-      <button type="button" onclick="put(29)">
-         <img id="box29" src="assets/empty-token.jpg" width="70" height="70">
+      <button type="button" onclick="put(4,4)">
+         <img id="r4c4" src="assets/empty-token.jpg" width="70" height="70">
       </button>
-      <button type="button" onclick="put(30)">
-         <img id="box30" src="assets/empty-token.jpg" width="70" height="70">
+      <button type="button" onclick="put(4,5)">
+         <img id="r4c5" src="assets/empty-token.jpg" width="70" height="70">
+      </button>
+      <br>
+      <span style="padding-left:25px"></span>
+      <button type="button" onclick="put(5,1)">
+         <img id="r5c1" src="assets/empty-token.jpg" width="70" height="70">
+      </button>
+      <button type="button" onclick="put(5,2)">
+         <img id="r5c2" src="assets/empty-token.jpg" width="70" height="70">
+      </button>
+      <button type="button" onclick="put(5,3)">
+         <img id="r5c3" src="assets/empty-token.jpg" width="70" height="70">
+      </button>
+      <button type="button" onclick="put(5,4)">
+         <img id="r5c4" src="assets/empty-token.jpg" width="70" height="70">
+      </button>
+      <button type="button" onclick="put(5,5)">
+         <img id="r5c5" src="assets/empty-token.jpg" width="70" height="70">
+      </button>
+      <br>
+      <span style="padding-left:25px"></span>
+      <button type="button" onclick="put(6,1)">
+         <img id="r6c1" src="assets/empty-token.jpg" width="70" height="70">
+      </button>
+      <button type="button" onclick="put(6,2)">
+         <img id="r6c2" src="assets/empty-token.jpg" width="70" height="70">
+      </button>
+      <button type="button" onclick="put(6,3)">
+         <img id="r6c3" src="assets/empty-token.jpg" width="70" height="70">
+      </button>
+      <button type="button" onclick="put(6,4)">
+         <img id="r6c4" src="assets/empty-token.jpg" width="70" height="70">
+      </button>
+      <button type="button" onclick="put(6,5)">
+         <img id="r6c5" src="assets/empty-token.jpg" width="70" height="70">
       </button>
 
       <script>
-        var card = "white-rock";
-        function put(num) {
-          document.getElementById("box"+num).src="assets/"+card+".jpg";
+        var cards = ["white-rock", "white-paper", "white-scissors"];
+        var currentCard = cards[Math.floor(Math.random() * cards.length)];
+        var enemyCards = ["black-rock", "black-paper", "black-scissors"];
+        var enemyCurrentCard = enemyCards[Math.floor(Math.random() * enemyCards.length)];
+        var freeBoxes = [[1,1],[1,2],[1,3],[1,4],[1,5],[2,1],[2,2],[2,3],[2,4],[2,5],[3,1],[3,2],[3,3],[3,4],[3,5],
+          [4,1],[4,2],[4,3],[4,4],[4,5],[5,1],[5,2],[5,3],[5,4],[5,5],[6,1],[6,2],[6,3],[6,4],[6,5]]
+        freeBoxes = shuffle(freeBoxes);
+        var grid = [
+          ["sentinel", "sentinel", "sentinel", "sentinel", "sentinel", "sentinel", "sentinel"],
+          ["sentinel", "empty-token", "empty-token", "empty-token", "empty-token", "empty-token", "sentinel"],
+          ["sentinel", "empty-token", "empty-token", "empty-token", "empty-token", "empty-token", "sentinel"],
+          ["sentinel", "empty-token", "empty-token", "empty-token", "empty-token", "empty-token", "sentinel"],
+          ["sentinel", "empty-token", "empty-token", "empty-token", "empty-token", "empty-token", "sentinel"],
+          ["sentinel", "empty-token", "empty-token", "empty-token", "empty-token", "empty-token", "sentinel"],
+          ["sentinel", "empty-token", "empty-token", "empty-token", "empty-token", "empty-token", "sentinel"],
+          ["sentinel", "sentinel", "sentinel", "sentinel", "sentinel", "sentinel", "sentinel"]
+        ];
+        async function put(row, column) {
+          if(grid[row][column]=="empty-token") {
+            grid[row][column]=currentCard;
+            updateFreeBoxes(row, column);
+            document.getElementById("r"+row+"c"+column).src="assets/"+currentCard+".jpg";
+            await new Promise(r => setTimeout(r, 2000));
+            const enemyTarget = freeBoxes.pop();
+            const enemyRow = enemyTarget[0];
+            const enemyColumn = enemyTarget[1]
+            grid[enemyRow][enemyColumn]=enemyCurrentCard;
+            document.getElementById("r"+enemyRow+"c"+enemyColumn).src="assets/"+enemyCurrentCard+".jpg";
+            currentCard = cards[Math.floor(Math.random() * cards.length)];
+            enemyCurrentCard = enemyCards[Math.floor(Math.random() * enemyCards.length)];
+          }
+        }
+        function updateFreeBoxes(row, column){
+          for(var i=0; i<freeBoxes.length; i++) {
+            if(freeBoxes[i][0]==row && freeBoxes[i][1]==column) {
+              freeBoxes.splice(i, 1);
+            }
+          }
+        }
+        function shuffle(array) {
+          var currentIndex = array.length, temporaryValue, randomIndex;
+          while (0 !== currentIndex) {
+            randomIndex = Math.floor(Math.random() * currentIndex);
+            currentIndex -= 1;
+            temporaryValue = array[currentIndex];
+            array[currentIndex] = array[randomIndex];
+            array[randomIndex] = temporaryValue;
+          }
+          return array;
         }
       </script>
 
