@@ -158,25 +158,7 @@
             await new Promise(r => setTimeout(r, 500));
             resolveClashAround(enemyRow, enemyColumn);
             if(freeBoxes.length==0) {
-              var whitePoints = 0;
-              var blackPoints = 0;
-              for(var i=1; i<=6; i++) {
-                for(var j=1; j<=5; j++) {
-                  if(grid[i][j].split("-")[0]=="white") {
-                    whitePoints++;
-                  }
-                  else if(grid[i][j].split("-")[0]=="black") {
-                    blackPoints++;
-                  }
-                }
-              }
-              document.getElementById("handCardCaption").innerHTML = whitePoints + "-" + blackPoints;
-              if(whitePoints>blackPoints) {
-                document.getElementById("handCard").src = "assets/win.jpg";
-              }
-              else {
-                document.getElementById("handCard").src = "assets/lose.jpg";
-              }
+              endGame();
             }
             else {
               currentCard = cards[Math.floor(Math.random() * cards.length)];
@@ -184,6 +166,10 @@
             }
             waitFlag = false;
           }
+        }
+        function showCard() {
+          document.getElementById("handCard").src = "assets/"+currentCard+".jpg";
+          document.getElementById("handCardCaption").innerHTML = "Posizionala:";
         }
         function resolveClashAround(row, column){
           var token = grid[row][column].split("-")[1];
@@ -208,9 +194,26 @@
             }
           }
         }
-        function showCard() {
-          document.getElementById("handCard").src = "assets/"+currentCard+".jpg";
-          document.getElementById("handCardCaption").innerHTML = "Posizionala:";
+        function endGame() {
+          var whitePoints = 0;
+          var blackPoints = 0;
+          for(var i=1; i<=6; i++) {
+            for(var j=1; j<=5; j++) {
+              if(grid[i][j].split("-")[0]=="white") {
+                whitePoints++;
+              }
+              else if(grid[i][j].split("-")[0]=="black") {
+                blackPoints++;
+              }
+            }
+          }
+          document.getElementById("handCardCaption").innerHTML = whitePoints + "-" + blackPoints;
+          if(whitePoints>blackPoints) {
+            document.getElementById("handCard").src = "assets/win.jpg";
+          }
+          else {
+            document.getElementById("handCard").src = "assets/lose.jpg";
+          }
         }
         function updateFreeBoxes(row, column){
           for(var i=0; i<freeBoxes.length; i++) {
