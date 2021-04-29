@@ -1,5 +1,13 @@
+<head>
+   <style>
+     p.info {
+       text-align: center;
+     }
+   </style>
+</head>
 <html>
    <body>
+      <p id="info" class="info"></p> 
       <span style="padding-left:25px"></span>
       <button type="button" onclick="put(1,1)">
          <img id="r1c1" src="assets/empty-token.jpg" width="70" height="70">
@@ -109,8 +117,7 @@
         var enemyCards = ["black-rock", "black-paper", "black-scissors"];
         var enemyCurrentCard = enemyCards[Math.floor(Math.random() * enemyCards.length)];
         var freeBoxes = [[1,1],[1,2],[1,3],[1,4],[1,5],[2,1],[2,2],[2,3],[2,4],[2,5],[3,1],[3,2],[3,3],[3,4],[3,5],
-          [4,1],[4,2],[4,3],[4,4],[4,5],[5,1],[5,2],[5,3],[5,4],[5,5],[6,1],[6,2],[6,3],[6,4],[6,5]]
-        freeBoxes = shuffle(freeBoxes);
+          [4,1],[4,2],[4,3],[4,4],[4,5],[5,1],[5,2],[5,3],[5,4],[5,5],[6,1],[6,2],[6,3],[6,4],[6,5]];
         var grid = [
           ["sentinel", "sentinel", "sentinel", "sentinel", "sentinel", "sentinel", "sentinel"],
           ["sentinel", "empty-token", "empty-token", "empty-token", "empty-token", "empty-token", "sentinel"],
@@ -121,6 +128,8 @@
           ["sentinel", "empty-token", "empty-token", "empty-token", "empty-token", "empty-token", "sentinel"],
           ["sentinel", "sentinel", "sentinel", "sentinel", "sentinel", "sentinel", "sentinel"]
         ];
+        freeBoxes = shuffle(freeBoxes);
+        notifyCard();
         async function put(row, column) {
           if(grid[row][column]=="empty-token" && waitFlag==false) {
             waitFlag = true;
@@ -134,6 +143,7 @@
             grid[enemyRow][enemyColumn] = enemyCurrentCard;
             document.getElementById("r"+enemyRow+"c"+enemyColumn).src = "assets/"+enemyCurrentCard+".jpg";
             currentCard = cards[Math.floor(Math.random() * cards.length)];
+            notifyCard();
             enemyCurrentCard = enemyCards[Math.floor(Math.random() * enemyCards.length)];
             waitFlag = false;
           }
@@ -144,6 +154,10 @@
               freeBoxes.splice(i, 1);
             }
           }
+        }
+        function notifyCard() {
+          document.getElementById("info").innerHTML = "Hai pescato <img id=\"handCard\" width=\"20\" height=\"20\">! Posizionalo:";
+          document.getElementById("handCard").src = "assets/"+currentCard+".jpg";
         }
         function shuffle(array) {
           var currentIndex = array.length, temporaryValue, randomIndex;
