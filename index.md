@@ -1,13 +1,16 @@
 <head>
    <style>
-     p.info {
+     figure.handCard {
        text-align: center;
      }
    </style>
 </head>
 <html>
    <body>
-      <p id="info" class="info"></p> 
+      <figure class="handCard">
+         <img id="handCard" width="70" height="70">
+         <figcaption id="handCardCaption"></figcaption>
+      </figure>
       <span style="padding-left:25px"></span>
       <button type="button" onclick="put(1,1)">
          <img id="r1c1" src="assets/empty-token.jpg" width="70" height="70">
@@ -129,10 +132,11 @@
           ["sentinel", "sentinel", "sentinel", "sentinel", "sentinel", "sentinel", "sentinel"]
         ];
         freeBoxes = shuffle(freeBoxes);
-        notifyCard();
+        showCard();
         async function put(row, column) {
           if(grid[row][column]=="empty-token" && waitFlag==false) {
             waitFlag = true;
+            document.getElementById("handCardCaption").innerHTML = "Attendi..";
             grid[row][column] = currentCard;
             updateFreeBoxes(row, column);
             document.getElementById("r"+row+"c"+column).src = "assets/"+currentCard+".jpg";
@@ -140,11 +144,11 @@
             const enemyTarget = freeBoxes.pop();
             const enemyRow = enemyTarget[0];
             const enemyColumn = enemyTarget[1]
+            enemyCurrentCard = enemyCards[Math.floor(Math.random() * enemyCards.length)];
             grid[enemyRow][enemyColumn] = enemyCurrentCard;
             document.getElementById("r"+enemyRow+"c"+enemyColumn).src = "assets/"+enemyCurrentCard+".jpg";
             currentCard = cards[Math.floor(Math.random() * cards.length)];
-            notifyCard();
-            enemyCurrentCard = enemyCards[Math.floor(Math.random() * enemyCards.length)];
+            showCard();
             waitFlag = false;
           }
         }
@@ -155,9 +159,9 @@
             }
           }
         }
-        function notifyCard() {
-          document.getElementById("info").innerHTML = "Carta in mano da posizionare: <img id=\"handCard\" width=\"35\" height=\"35\">";
+        function showCard() {
           document.getElementById("handCard").src = "assets/"+currentCard+".jpg";
+          document.getElementById("handCardCaption").innerHTML = "Posizionala:";
         }
         function shuffle(array) {
           var currentIndex = array.length, temporaryValue, randomIndex;
