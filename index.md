@@ -157,8 +157,31 @@
             document.getElementById("r"+enemyRow+"c"+enemyColumn).src = "assets/"+enemyCurrentCard+".jpg";
             await new Promise(r => setTimeout(r, 500));
             resolveClashAround(enemyRow, enemyColumn);
-            currentCard = cards[Math.floor(Math.random() * cards.length)];
-            showCard();
+            if(freeBoxes.length==0) {
+              var whitePoints = 0;
+              var blackPoints = 0;
+              for(var i=1; i<=6; i++) {
+                for(var j=1; j<=5; j++) {
+                  if(grid[i][j].split("-")[0]=="white") {
+                    whitePoints++;
+                  }
+                  else if(grid[i][j].split("-")[0]=="black") {
+                    blackPoints++;
+                  }
+                }
+              }
+              document.getElementById("handCardCaption").innerHTML = whitePoints + "-" + blackPoints;
+              if(whitePoints>blackPoints) {
+                document.getElementById("handCard").src = "assets/win.jpg";
+              }
+              else {
+                document.getElementById("handCard").src = "assets/lose.jpg";
+              }
+            }
+            else {
+              currentCard = cards[Math.floor(Math.random() * cards.length)];
+              showCard();
+            }
             waitFlag = false;
           }
         }
@@ -178,7 +201,7 @@
                 grid[i][j] = "destroyed-token";
                 document.getElementById("r"+i+"c"+j).src = "assets/destroyed-token.jpg";
               }
-              if(grid[i][j].split("-")[1]==lose) {
+              else if(grid[i][j].split("-")[1]==lose) {
                 grid[row][column] = "destroyed-token";
                 document.getElementById("r"+row+"c"+column).src = "assets/destroyed-token.jpg";
               }
