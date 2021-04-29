@@ -115,10 +115,15 @@
 
       <script>
         var waitFlag = false;
-        var cards = ["white-rock", "white-paper", "white-scissors"];
+        const cards = ["white-rock", "white-paper", "white-scissors"];
         var currentCard = cards[Math.floor(Math.random() * cards.length)];
-        var enemyCards = ["black-rock", "black-paper", "black-scissors"];
+        const enemyCards = ["black-rock", "black-paper", "black-scissors"];
         var enemyCurrentCard = enemyCards[Math.floor(Math.random() * enemyCards.length)];
+        const wins = [
+          ["white-rock", "scissors"], ["black-rock", "scissors"],
+          ["white-paper", "rock"], ["black-paper", "rock"],
+          ["white-scissors", "paper"], ["black-scissors", "paper"], 
+        ];
         var freeBoxes = [[1,1],[1,2],[1,3],[1,4],[1,5],[2,1],[2,2],[2,3],[2,4],[2,5],[3,1],[3,2],[3,3],[3,4],[3,5],
           [4,1],[4,2],[4,3],[4,4],[4,5],[5,1],[5,2],[5,3],[5,4],[5,5],[6,1],[6,2],[6,3],[6,4],[6,5]];
         var grid = [
@@ -141,17 +146,41 @@
             grid[row][column] = currentCard;
             updateFreeBoxes(row, column);
             document.getElementById("r"+row+"c"+column).src = "assets/"+currentCard+".jpg";
-            await new Promise(r => setTimeout(r, 2000));
+            await new Promise(r => setTimeout(r, 500));
+            resolveClashAround(row, column);
+            await new Promise(r => setTimeout(r, 1000));
             const enemyTarget = freeBoxes.pop();
             const enemyRow = enemyTarget[0];
             const enemyColumn = enemyTarget[1]
             enemyCurrentCard = enemyCards[Math.floor(Math.random() * enemyCards.length)];
             grid[enemyRow][enemyColumn] = enemyCurrentCard;
             document.getElementById("r"+enemyRow+"c"+enemyColumn).src = "assets/"+enemyCurrentCard+".jpg";
+            await new Promise(r => setTimeout(r, 500));
+            resolveClashAround(row, column);
             currentCard = cards[Math.floor(Math.random() * cards.length)];
             showCard();
             waitFlag = false;
           }
+        }
+        function resolveClashAround(row, column){
+          if(grid[row][column]=="white-paper" || grid[row][column]=="black-paper") {
+            for(var i=row-1; i<=row+1; i++) {
+              for(var j=column-1; j<=column+1; j++) {
+                if(grid[i][j]=="white-rock" || grid[i][j]=="black-rock") {
+                  grid[i][j] = "destroyed-token";
+                  document.getElementById("r"+i+"c"+j).src = "assets/destroyed-token.jpg";
+                }
+                if(grid[i][j]=="white-scissors" || grid[i][j]=="black-scissors") {
+                  grid[row][column] = "destroyed-token";
+                  document.getElementById("r"+row+"c"+column).src = "assets/destroyed-token.jpg";
+                }
+              }
+            }
+          }
+        }
+        function showCard() {
+          document.getElementById("handCard").src = "assets/"+currentCard+".jpg";
+          document.getElementById("handCardCaption").innerHTML = "Posizionala:";
         }
         function updateFreeBoxes(row, column){
           for(var i=0; i<freeBoxes.length; i++) {
@@ -159,10 +188,6 @@
               freeBoxes.splice(i, 1);
             }
           }
-        }
-        function showCard() {
-          document.getElementById("handCard").src = "assets/"+currentCard+".jpg";
-          document.getElementById("handCardCaption").innerHTML = "Posizionala:";
         }
         function shuffle(array) {
           var currentIndex = array.length, temporaryValue, randomIndex;
