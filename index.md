@@ -123,10 +123,10 @@
         ];
         async function put(row, column) {
           if(grid[row][column]=="empty-token" && waitFlag==false) {
+            waitFlag = true;
             grid[row][column] = currentCard;
             updateFreeBoxes(row, column);
             document.getElementById("r"+row+"c"+column).src = "assets/"+currentCard+".jpg";
-            waitFlag = true;
             await new Promise(r => setTimeout(r, 2000));
             const enemyTarget = freeBoxes.pop();
             const enemyRow = enemyTarget[0];
