@@ -156,7 +156,7 @@
           }
         }
         function notifyCard() {
-          document.getElementById("info").innerHTML = "Hai pescato <img id=\"handCard\" width=\"30\" height=\"30\">! Posizionalo:";
+          document.getElementById("info").innerHTML = "Carta in mano da posizionare: <img id=\"handCard\" width=\"35\" height=\"35\">";
           document.getElementById("handCard").src = "assets/"+currentCard+".jpg";
         }
         function shuffle(array) {
