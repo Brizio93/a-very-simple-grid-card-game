@@ -136,6 +136,7 @@
         async function put(row, column) {
           if(grid[row][column]=="empty-token" && waitFlag==false) {
             waitFlag = true;
+            document.getElementById("handCard").src = "assets/wait.jpg";
             document.getElementById("handCardCaption").innerHTML = "Attendi..";
             grid[row][column] = currentCard;
             updateFreeBoxes(row, column);
