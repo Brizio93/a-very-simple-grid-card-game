@@ -119,11 +119,11 @@
         var currentCard = cards[Math.floor(Math.random() * cards.length)];
         const enemyCards = ["black-rock", "black-paper", "black-scissors"];
         var enemyCurrentCard = enemyCards[Math.floor(Math.random() * enemyCards.length)];
-        const wins = [
-          ["white-rock", "scissors"], ["black-rock", "scissors"],
-          ["white-paper", "rock"], ["black-paper", "rock"],
-          ["white-scissors", "paper"], ["black-scissors", "paper"], 
-        ];
+        const tokenWinLose = [
+          ["rock", "scissors", "paper"],
+          ["paper", "rock", "scissors"],
+          ["scissors", "paper", "rock"],
+        ]
         var freeBoxes = [[1,1],[1,2],[1,3],[1,4],[1,5],[2,1],[2,2],[2,3],[2,4],[2,5],[3,1],[3,2],[3,3],[3,4],[3,5],
           [4,1],[4,2],[4,3],[4,4],[4,5],[5,1],[5,2],[5,3],[5,4],[5,5],[6,1],[6,2],[6,3],[6,4],[6,5]];
         var grid = [
@@ -156,24 +156,31 @@
             grid[enemyRow][enemyColumn] = enemyCurrentCard;
             document.getElementById("r"+enemyRow+"c"+enemyColumn).src = "assets/"+enemyCurrentCard+".jpg";
             await new Promise(r => setTimeout(r, 500));
-            resolveClashAround(row, column);
+            resolveClashAround(enemyRow, enemyColumn);
             currentCard = cards[Math.floor(Math.random() * cards.length)];
             showCard();
             waitFlag = false;
           }
         }
         function resolveClashAround(row, column){
-          if(grid[row][column]=="white-paper" || grid[row][column]=="black-paper") {
-            for(var i=row-1; i<=row+1; i++) {
-              for(var j=column-1; j<=column+1; j++) {
-                if(grid[i][j]=="white-rock" || grid[i][j]=="black-rock") {
-                  grid[i][j] = "destroyed-token";
-                  document.getElementById("r"+i+"c"+j).src = "assets/destroyed-token.jpg";
-                }
-                if(grid[i][j]=="white-scissors" || grid[i][j]=="black-scissors") {
-                  grid[row][column] = "destroyed-token";
-                  document.getElementById("r"+row+"c"+column).src = "assets/destroyed-token.jpg";
-                }
+          var token = grid[row][column].split("-")[1];
+          var win;
+          var lose;
+          for(var k=0; k<3; k++) {
+            if(tokenWinLose[k][0]==token) {
+              win = tokenWinLose[k][1];
+              lose = tokenWinLose[k][2];
+            }
+          }
+          for(var i=row-1; i<=row+1; i++) {
+            for(var j=column-1; j<=column+1; j++) {
+              if(grid[i][j].split("-")[1]==win) {
+                grid[i][j] = "destroyed-token";
+                document.getElementById("r"+i+"c"+j).src = "assets/destroyed-token.jpg";
+              }
+              if(grid[i][j].split("-")[1]==lose) {
+                grid[row][column] = "destroyed-token";
+                document.getElementById("r"+row+"c"+column).src = "assets/destroyed-token.jpg";
               }
             }
           }
