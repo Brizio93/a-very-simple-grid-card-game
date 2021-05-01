@@ -363,7 +363,6 @@
     for(var i=0; i<3; i++) {
       row = getRandomInt(1,8);
       column = getRandomInt(1,8);
-      console.log(row + " " + column);
       if(grid[row][column]=="empty-pawn") {
         grid[row][column] = "dark-pawn";
         document.getElementById("r"+row+"c"+column).src = "assets/dark-pawn.jpg";
